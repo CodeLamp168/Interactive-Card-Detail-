@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+  <div class="bg-mobile" ></div>
+  <div class="bg-desktop"></div>
+  <main>
+    <container class="cards">
+
+      <div class="card-front">
+        <svg class="svg-logo" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/>
+          <path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" 
+          stroke="#fff"/>
+        </svg>
+
+        <h2 class="card-design-card-number" id="js-card-number">0000000000000000</h2>
+
+        <div class="card-design-name-expirey">
+
+          <div class="card-holder-name" id="js-card-name">John Dough</div>
+
+          <div class="card-expire-date">
+            <div class="expire-month" id="js-card-expire-month"> 00</div>
+            <div>/</div>
+            <div class="expire-yaer" id="js-card-expire-year">  00 </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card-back collapse-space">
+        <div class="back-cvc" id="js-card-cvc"> 000 </div>
+      </div>
+    </container>
+
+
+     <form id="js-form" action="" method="GET">
+          <label for="name">CARDHOLDER NAME</label>
+          <input type="text" id="name" placeholder="e.g. John Dough"></input>
+          
+          <label for="number"> CARD NUMBER</label>
+          <input type="tel" name="card-number" id="number" placeholder="e.g. 1234 5678 9123 0000"></input>
+
+          <div class="expire-cvc">
+
+            <div class="expire-date">
+              <label for="expire-date">EXP. DATE (MM/YY)</label>
+              <div class="mobile-sizing">
+                <input id="expire_month"type="tel" name="expire-date" class="month" placeholder="MM" maxlength="2">
+                <input id="expire_year" type="tel" name="expire-date" class="year" placeholder="YY" maxlength="2">
+              </div>
+            </div>
+
+            <div class="cvc-area">
+              <label for="cvc">CVC</label>
+              <input id="input_cvc" type="tel" name="cvc" placeholder="e.g. 123" maxlength="3">
+            </div>
+          </div>
+
+          <small>Please apply the right credentials</small>
+
+          
+
+          <button class="btn-submit">Confirm</button>
+      </form>
+
+      <!-- Completed state start -->
+      <container class="thank-you" id="js-thanks">
+        <img src="./images/icon-complete.svg" alt="">
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button class="btn-thanks">Continue</button>
+      </container>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Caleb Sim</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

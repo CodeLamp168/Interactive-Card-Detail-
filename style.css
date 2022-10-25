@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    height:100%;
+}
+
+
+body {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+    height:80vh;
+    font-size:18px;
+    font-family: 'Space Grotesk';
+    color:white;
+    overflow:scroll;
+    background-image: url(./images/bg-main-mobile.png);
+    background-position:top;
+    background-size:contain;
+    background-repeat:no-repeat;
+    overflow-x:hidden;
+}
+
+img {
+    width:100%;
+    height:auto;
+}
+
+svg {
+    width:100%;
+    height:auto;
+}
+
+main {
+    margin-top:5em;
+    padding:3px;
+    width:375px;
+    z-index:1;
+
+}
+
+
+/*Card-Display-Design*/
+
+.cards {
+position:relative;
+
+
+}
+
+.card-front {
+    width:320px;
+    font-size:13px;
+    background-image:url(./images/bg-card-front.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+    top:4em;
+    left:0.8em;
+    padding:1.4em;
+    border-radius:10px;
+    z-index:1
+    
+}
+
+.card-design-name-expirey {
+    display:flex;
+    justify-content: space-between;
+}
+
+.card-expire-date {
+    display:flex;
+}
+
+.svg-logo {
+    height:5em;
+}
+
+.card-back {
+    width:330px;
+    height:190px;
+    border-radius:10px;
+    background-image: url(./images/bg-card-back.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:absolute;
+    bottom:-7em;
+    left:2em;
+    z-index: -1;
+
+}
+
+.back-cvc {
+    position:absolute;
+    z-index:1;
+    top:4.6em;
+    right:1.6em;
+    
+}
+
+
+
+/*Form-Section-Design*/
+form {
+    transition: 0.3s ease all;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    color:black;
+    padding:4em 1em;
+    overflow:visible;
+    height:auto;
+    border-radius:10px 10px 20px 20px;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.055);
+}
+
+.finished-form {
+    display:none;
+}
+
+label {
+    margin-top:2em;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+
+input {
+    margin-top: 5px;
+    font-size:18px;
+    border: 1px hsl(270, 3%, 87%) solid;
+    padding:0.3em;
+    border-radius:10px;
+}
+
+
+.mobile-sizing input {
+    width:80px;
+}
+
+.expire-cvc {
+    margin-top:1.3em;
+    display:flex;
+    margin-left:0px;
+}
+
+.cvc-area {
+width:100px;
+margin-left: 1em;
+}
+.cvc-area input {
+    width:150px;
+}
+
+.error  {
+    transition: border 0.2s ease-in;
+    border: red 1px solid;
+}
+
+.valid {
+    transition: border 0.2s ease-in;
+    border: rgb(26, 216, 26) 1px solid;
+}
+
+small {
+    display:none;
+}
+.error-notification {
+    text-align:center;
+    font-size:11px;
+    margin-top:10px;
+    color:red;
+    display:block;
+}
+
+.error-notification-remove {
+    display:none;
+}
+
+
+
+.btn-submit {
+
+    margin-top:2em;
+    margin-bottom:-3em;
+    padding: 1em;
+    border:0;
+    background-color:hsl(278, 68%, 11%);
+    border: 2px solid hsl(278, 68%, 11%);
+    color:white;
+    cursor:pointer;
+    border-radius:6px;
+    font-family:'Space Grotesk';
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color:white;
+    border: 2px solid hsl(278, 68%, 11%);
+    color:hsl(278, 68%, 11%);
+}
+
+
+
+/* Thank you message container*/
+.thank-you {
+    margin-top:40px;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+    align-items: center;
+    font-size:15px;
+    padding:2em 4em;
+    
+}
+
+.thank-active {
+    display:flex;
+}
+
+.thank-you img {
+    width:100px; 
+    height:100px;
+}
+.thank-you h1 {
+    color:black;
+}
+
+.thank-you p {
+    margin-top:-15px;
+    color: hsl(279, 6%, 55%);
+}
+
+.btn-thanks {
+    margin-top:2em;
+    width:50%;
+    padding: 1em;
+    border:0;
+    background-color:hsl(278, 68%, 11%);
+    color:white;
+    cursor:pointer;
+    border-radius:6px;
+    font-family:'Space Grotesk'
+}
+
+/* Attribution & moved to bottom */
+
+.attribution { font-size: 11px; text-align: center; color:black; }
+.attribution a { color: hsl(0, 0%, 0%); }
+
+.attribution {
+    position:absolute;
+    bottom:3%;
+}
+@media(max-height:650px) {
+    .attribution {
+        display:none;
+    }
+
+}
+
+@media (min-width:73em)
+{
+    .bg-mobile {
+        display:none;
+    }
+
+    body {
+        background-image: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+    }
+
+
+    main {
+      display:flex;
+      align-items: center;
+      justify-content:space-around;
+      width:75%;
+      height:50%;
+    }
+
+    form {
+        width:370px;
+        height:430px;
+        box-shadow: none;
+    }
+
+    .card-front {
+        width:320px;
+        top:-5em;
+        left:-3em;
+        padding:2em;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.144);
+    }
+
+    .card-back {
+        bottom:-9em;
+        left:1em;
+        z-index: -1;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.144);
+
+    }
+
+}
