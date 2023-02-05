@@ -15,12 +15,12 @@ body {
     width:100%;
     min-height:100vh;
     background-color:#FFF;
-    background-image:url('/images/bg-main-mobile.png');
+    background-image:url('images/bg-main-mobile.png');
     background-repeat:no-repeat;
     background-size:contain;
 
     @media(min-width:800px) {
-        background-image:url('/images/bg-main-desktop.png');
+        background-image:url('images/bg-main-desktop.png');
     }
 
     @media(min-width:1150px) {
